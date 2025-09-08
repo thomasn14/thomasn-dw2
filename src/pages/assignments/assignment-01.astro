@@ -37,6 +37,7 @@ export const pageTitle = "Assignment 01";
         alt="View of the Catskill Mountains near Tannersville"
         class="hero-image"
       />
+    </section>
       <section class="section-activity" id="hike">
         <div class="section-text-panel">
           <h2>Hike</h2>
@@ -67,6 +68,7 @@ export const pageTitle = "Assignment 01";
           src={imgPaddle}
           alt="Person paddling in the Sawkill River near Kingston"
           class="section-image"
+        />
         />
       </section>
       <section class="section-activity" id="bike">
@@ -165,5 +167,29 @@ export const pageTitle = "Assignment 01";
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-  
+  .section-hero {
+    width: 100%;
+    height: 600px;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero-image{
+    position: absolute;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit: cover;
+  }
+  .hero-text-block {
+    position: relative;
+    z-index: 100;
+    background-color: white;
+    width: 400px;
+    padding: 32px;
+
+
+
+  }
 </style>
