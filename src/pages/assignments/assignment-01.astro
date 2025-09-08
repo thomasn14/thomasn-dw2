@@ -1,17 +1,129 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import CompactLayout from "../../layouts/CompactLayout.astro";
+import { Image } from "astro:assets";
+import imgBike from "@assets/assignment-01/bike.jpg";
+import imgHero from "@assets/assignment-01/hero-image.jpg";
+import imgHike from "@assets/assignment-01/hike.jpg";
+import imgPaddle from "@assets/assignment-01/paddle.jpg";
 
 // This next line is used to set the page title on the site navigation and in the browser tab.
-export const pageTitle = "Assignment 02";
+export const pageTitle = "Assignment 01";
 ---
 
 <Layout compact title={pageTitle}>
-  <h1>Assignment 02</h1>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum labore
-    maxime quae dolore beatae doloribus harum saepe facere reiciendis
-    exercitationem, ullam officiis quos error officia molestiae quas libero modi
-    vero?
-  </p>
+  <section class="section-activity">
+    <div class="section-text-panel">
+      <h2>Hike</h2>
+      <p>
+        Lace up your boots and wander through forests, ridgelines, and river
+        views. Whether you're after a casual stroll or a challenging summit, the
+        Hudson Valley has a trail for you.
+      </p>
+      <a href="" class="btn-cta">Explore Hikes</a>
+    </div>
+    <Image
+      src={imgHike}
+      alt="Person sitting on the edge of a cliff at Joppenburg Mountain in Rosendale"
+      class="section-image"
+    />
+  </section>
+  <section class="section-activity section-reverse">
+    <div class="section-text-panel">
+      <h2>Paddle</h2>
+      <p>
+        Kayak, canoe, or SUP your way through calm lakes and the mighty Hudson
+        River. Drift through quiet waters or chase a sunrise paddle surrounded
+        by breathtaking scenery.
+      </p>
+      <a href="" class="btn-cta">Explore Paddling</a>
+    </div>
+    <Image
+      src={imgPaddle}
+      alt="Person paddling in the Sawkill River near Kingston"
+      class="section-image"
+    />
+  </section>
+  <section class="section-activity">
+    <div class="section-text-panel">
+      <h2>Bike</h2>
+      <p>
+        Ride through rolling farmland, historic towns, and winding carriage
+        roads. From gravel adventures to paved scenic byways, cycling here is
+        all about freedom and discovery.
+      </p>
+      <a href="" class="btn-cta">Explore Cycling</a>
+    </div>
+    <Image
+      src={imgBike}
+      alt="Bike on the side of a carriage road at Mohonk Preserve"
+      class="section-image"
+    />
+  </section>
+
+  <nav class="places-grid">
+    <a class="places-tile"
+      ><p class="places-name">Mohonk Preserve</p>
+      <p class="places-location">New Paltz</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Minnewaska State Park Preserve</p>
+      <p class="places-location">Kerhonkson</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Breakneck Ridge</p>
+      <p class="places-location">Cold Spring</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Storm King Mountain</p>
+      <p class="places-location">Cornwall-on-Hudson</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Overlook Mountain</p>
+      <p class="places-location">Woodstock</p></a
+    >
+
+    <a class="places-tile"
+      ><p class="places-name">Hudson River Estuary</p>
+      <p class="places-location">Various access points</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Esopus Creek</p>
+      <p class="places-location">Saugerties</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Moodna Creek</p>
+      <p class="places-location">Cornwall</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Rondout Creek</p>
+      <p class="places-location">Kingston</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Black Creek Preserve</p>
+      <p class="places-location">Esopus</p></a
+    >
+
+    <a class="places-tile"
+      ><p class="places-name">Wallkill Valley Rail Trail</p>
+      <p class="places-location">Gardiner to Kingston</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Ashokan Rail Trail</p>
+      <p class="places-location">Olivebridge</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">
+        Hudson Valley Rail Trail → Walkway Over the Hudson
+      </p>
+      <p class="places-location">Highland to Poughkeepsie</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Albany-Hudson Electric Trail</p>
+      <p class="places-location">Columbia County</p></a
+    >
+    <a class="places-tile"
+      ><p class="places-name">Shawangunk Carriage Roads</p>
+      <p class="places-location">New Paltz / Minnewaska</p></a
+    >
+  </nav>
 </Layout>
