@@ -1,31 +1,17 @@
 ---
-import NavLayout from "../components/nav/NavLayout.astro";
-const { title = "Untitled" } = Astro.props;
+import StandardLayout from "./StandardLayout.astro";
+import CompactLayout from "./CompactLayout.astro";
+const { compact = false, title } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <title>{title}</title>
-  </head>
-  <body>
-    <NavLayout>
+{
+  compact ? (
+    <CompactLayout title={title}>
       <slot />
-    </NavLayout>
-  </body>
-</html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-  body {
-    display: flex;
-  }
-</style>
+    </CompactLayout>
+  ) : (
+    <StandardLayout title={title}>
+      <slot />
+    </StandardLayout>
+  )
+}

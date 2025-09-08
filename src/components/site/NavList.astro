@@ -1,0 +1,33 @@
+---
+const assignments: { url: string; pageTitle: string }[] = Object.values(
+  import.meta.glob("/src/pages/assignments/*", {
+    eager: true,
+  })
+);
+---
+
+<ul>
+  {
+    assignments.map((assignment) => {
+      return (
+        <li>
+          <a href={assignment.url}>{assignment.pageTitle}</a>
+        </li>
+      );
+    })
+  }
+</ul>
+<style>
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: center;
+  }
+  li {
+    margin: 0;
+  }
+</style>
