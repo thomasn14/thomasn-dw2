@@ -40,6 +40,8 @@ export const pageTitle = "Assignment 01";
     </section>
       <section class="section-activity" id="hike">
         <div class="section-text-panel">
+
+        </style>
           <h2>Hike</h2>
           <p>
             Lace up your boots and wander through forests, ridgelines, and river
@@ -188,8 +190,68 @@ export const pageTitle = "Assignment 01";
     background-color: white;
     width: 400px;
     padding: 32px;
+    opacity: .9;
+  }
+  .section-activity {
+    position: relative;
+    display:flex;
+    width: 1200px;
+  }
 
 
+  div.section-text-panel{
+      width: 25%;
+      position: relative;
+      left: 75px;
+    }
+  
+ .section-image {
+    display: flex;
+    width: 800px;
+    height: 500px;
+    position: relative;
+    left: 400px;
+  }
+  .btn-cta {
+    padding: 8px;
+    border: 4px solid teal;
+    border-radius: 10px;
+  }
+
+
+  #hike.section-activity {
+    width: 800px;
+    position:relative;
+    top:65px;
+    left:150px;
+    background-color: gainsboro;
 
   }
+  .places-grid{
+    position:relative;
+    left:180px;
+    width: 1000px;
+     display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 15px;
+      padding:20px;
+  }
+  a{
+    background-color: peachpuff;
+    text-align: center;
+    font-size:medium;
+  }
+  .places-name{
+    font-weight: bold;
+  }
+  .places-location{
+    bottom:5px;
+  }
+  .explore{
+    text-align: center;
+    font-weight: bold;
+    font-size:larger ;
+  }
+  
 </style>
