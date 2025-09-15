@@ -168,7 +168,11 @@ export const pageTitle = "Assignment 01";
 <style>
   /* importing fonts */
   @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+  @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Mono&display=swap');
 
+  body{
+    padding:0%;
+  }
   .section-hero {
     width: 100%;
     height: 600px;
@@ -193,37 +197,46 @@ export const pageTitle = "Assignment 01";
     opacity: .9;
   }
   .section-activity {
-    position: relative;
     display:flex;
-    width: 1200px;
+    max-width: 1200px;
+    justify-content: center;
   }
 
+  .section-text-panel{
+      width: 550px;
+      padding:25px;
+      flex-shrink: 0px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
 
-  div.section-text-panel{
-      width: 25%;
-      position: relative;
-      left: 75px;
+    }
+    .section-textpanel p{
+      margin:0;
+
     }
   
  .section-image {
-    display: flex;
-    width: 800px;
-    height: 500px;
-    position: relative;
-    left: 400px;
+    width:100%;
+    height:500px;
+    object-fit:cover;
+  }
+  .section-reverse{
+    flex-direction: row-reverse;
   }
   .btn-cta {
     padding: 8px;
-    border: 4px solid teal;
-    border-radius: 10px;
+    border: 2px solid teal;
+    border-radius: 8px;
+    color:teal;
+    font-weight:bold;
+    text-decoration:none;
+    align-self:flex-start
   }
 
 
-  #hike.section-activity {
-    width: 800px;
-    position:relative;
-    top:65px;
-    left:150px;
+  .section-activity {
+
     background-color: gainsboro;
 
   }
@@ -237,21 +250,57 @@ export const pageTitle = "Assignment 01";
       gap: 15px;
       padding:20px;
   }
-  a{
+  .page-container{
+   font-family:Arial, Helvetica, sans-serif
+  }
+  .places-tile{
     background-color: peachpuff;
-    text-align: center;
-    font-size:medium;
+    width:200px;
+    height:125px;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:8px;
   }
   .places-name{
+    font-size:20px;
     font-weight: bold;
+    text-decoration:none;
+  }
+  .places-tile p{
+    margin-top:0;
   }
   .places-location{
+    font-size:16px;
     bottom:5px;
+    text-decoration:none;
   }
   .explore{
     text-align: center;
     font-weight: bold;
     font-size:larger ;
   }
-  
+  header{
+    display:flex;
+    justify-content: center;
+    padding:8px;
+  }
+  .nav-items{
+    display:flex;
+    gap:16px;
+  }
+  .nav-btn{
+    background-color: darkgreen;
+    border-radius: 3px;
+
+  }
+  nav{
+    display:flex;
+    margin:0;
+    justify-content: space-between;
+    max-width:1200px;
+    width:100%;
+
+  }
 </style>
