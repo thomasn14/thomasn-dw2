@@ -333,13 +333,19 @@ export const pageTitle = "Assignment 01 Mobile Design";
 </style> */ -->
 
 <style>
-  body{
+  .page-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+  }
+  /* body{
     padding:0%;
     display:flex;
     justify-content:center;
     font-family:Arial, Helvetica, sans-serif
 
-  }
+  } */
   .section-hero {
     width: 100%;
     height: 600px;
@@ -359,7 +365,6 @@ export const pageTitle = "Assignment 01 Mobile Design";
     position: relative;
     z-index: 100;
     background-color: white;
-    width: 375px;
     padding: 32px;
     opacity: .9;
     top:155px;
@@ -377,7 +382,7 @@ export const pageTitle = "Assignment 01 Mobile Design";
     flex-direction:column-reverse
   }
 .section-text-panel{
-      width: 375px;
+     
       padding:25px;
       flex-shrink: 0px;
       /* display:flex;
@@ -385,7 +390,6 @@ export const pageTitle = "Assignment 01 Mobile Design";
       justify-content:center;
       min-width:255px;
     background-color: gainsboro;
-    width: 400px;
     padding: 32px;
   
     }
@@ -406,9 +410,7 @@ export const pageTitle = "Assignment 01 Mobile Design";
     font-style: italic;
   }
   .places-grid{
-    position:relative;
-    left:180px;
-    width: 375px;
+
      display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(8, 1fr);
@@ -420,8 +422,6 @@ export const pageTitle = "Assignment 01 Mobile Design";
   }
  .places-tile{
     background-color: peachpuff;
-    width:200px;
-    height:125px;
     text-align:center;
     display:flex;
     flex-direction: column;
@@ -446,5 +446,14 @@ export const pageTitle = "Assignment 01 Mobile Design";
     bottom:5px;
     text-decoration:none;
   }
-
+  .nav-btn{
+    background-color: darkgreen;
+    border-radius: 3px;
+    text-align: center;
+   display: inline-block;
+   color:rgb(233, 228, 83);
+   text-decoration: none;
+  font-family: Bree serif;
+  align-items: center;
+  }
 </style>
