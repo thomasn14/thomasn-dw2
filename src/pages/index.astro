@@ -1,12 +1,24 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
 import Button from "@components/Button.astro";
 import Frame from "@components/Frame.astro";
+import ButtonProposal from "/workspaces/thomasn-dw2/src/components/site/ButtonProposal.astro";
+import Accordian from "/workspaces/thomasn-dw2/src/components/Accordian.astro";
+import {Content as SampleContent} from "../components/markdown/sample-content.md"
+
 ---
 
 <Layout title="Home">
   <h1>Welcome!</h1>
   <Button href="assignment,assignment 01, home"/>
+<Accordian title="Sample Accordian">
+<p>Content in accordian</p>
+<p> More content</p>
+</Accordian>
+  
+<Layout title="Home">
+  <h1>Site Proposal</h1>
+  <ButtonProposal href="assignment,assignment 01, home"/>
 
   <Frame>
      <Frame title="My awesome frame"/>
@@ -16,6 +28,7 @@ import Frame from "@components/Frame.astro";
     What we learned at practice last week/ what we are foucusing on this week. 
   </p>
   </Frame>
+  <SampleContent/>
 </Layout>
 
 

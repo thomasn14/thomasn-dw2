@@ -1,0 +1,22 @@
+---
+const {href}=Astro.props;
+---
+
+<a class="btn-home" href="/">Site Proposal</a>
+
+<style>
+    .btn-home{
+        display:inline-block;
+        text-decoration:none;
+        padding:1rem;
+        background-color: transparent;
+        border: 1.5px solid blue;
+        border-radius: 3px;
+        color: blue
+    }
+    .btn-home:hover{
+        background-color: blue;
+        color:white;
+    }
+
+</style>
