@@ -1,0 +1,45 @@
+---
+import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
+import Button from "/workspaces/thomasn-dw2/src/components/Button.astro";
+// import {Image} from "/workspaces/thomasn-dw2/src/assets/Frisbee Site/GUNX Logo.png";
+import {Image} from 'astro:assets';
+import GunxLogo from "../../assets/Frisbee Site/GUNX Logo.png";
+export const pageTitle = "Frisbee Site";
+---
+
+<Layout compact title={pageTitle}></Layout>
+<Image src={GunxLogo} alt="frisbee" width={300} height={300}/>
+<h2>
+GUNX Ultimate 
+SUNY New Paltz Ultimate Frisbee
+</h2>     
+  <p>What is Frisbee?</p>
+  
+  <Button href=""/>
+  
+  </Frame>
+</Layout>
+
+<style>
+    .page-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+  }
+    body {
+        background-color: black;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+      }
+    h2{
+      color: white;}
+    p{
+        color:white;
+    }
+
+
+
+
+</style>
