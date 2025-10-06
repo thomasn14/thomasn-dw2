@@ -4,8 +4,10 @@ import Button from "/workspaces/thomasn-dw2/src/components/Button.astro";
 // import {Image} from "/workspaces/thomasn-dw2/src/assets/Frisbee Site/GUNX Logo.png";
 import {Image} from 'astro:assets';
 import GunxLogo from "../../assets/Frisbee Site/GUNX Logo.png";
+import CardBackground from "../../assets/Frisbee Site/card-background.png";
 export const pageTitle = "Frisbee Site";
 ---
+
 
 <Layout compact title={pageTitle}></Layout>
 <Image src={GunxLogo} alt="frisbee" width={300} height={300}/>
@@ -22,7 +24,7 @@ export const pageTitle = "Frisbee Site";
         <div class="nav-items">
           <a href="#whatfrisbee" class="nav-btn">What is Frisbee?</a>
           <a href="#meetGUNX" class="nav-btn">Meet the GUNX</a>
-          <a href="#dates" class="nav-btn">Important Dates</a> <br>
+          <a href="#dates" class="nav-btn">Important Dates</a> 
           <a href="#practice" class="nav-btn">Practice Times</a>
           <a href="#contact" class="nav-btn">Contact</a>
         </div>
@@ -33,17 +35,39 @@ export const pageTitle = "Frisbee Site";
 <h2>
   <p>What is Frisbee?</p>
   
-  <Button href=""/>
-   <p>Meet the GUNX</p>
-    <p>Important Dates</p>
-    <p>Practice Times</p>
-    <p>Contact</p>
+  <!-- get involved button -->
+  <Button href=""/> 
+
+    <section id="whatfrisbee">
+     <p>What is Frisbee?</p>
+  </section>
+
+  <section id="meetGUNX">
+     <p>Meet the GUNX</p>
+  </section>
+
+  <section id="dates">
+     <p>Important Dates</p>
+   </section>
+
+  <section id="practice">
+     <p>Practice Times</p>
+   </section>
+
+  <section id="contact">
+     <p>Contact</p>
+   </section>
+ 
+   
+  
 </h2>
   </Frame>
 </Layout>
 
-<div class="box">
-<p>hi</p>
+
+<div class="card-background">
+
+<Image src={CardBackground} alt="frisbee" width={300} height={300}/>
 </div>
 
 
@@ -68,10 +92,11 @@ export const pageTitle = "Frisbee Site";
       padding:1rem;
     }
     
-    nav-items{
+    .nav-items{
       display:flex;
       flex-wrap: wrap;
       justify-content:center;
+      gap:1rem;
       
      
     }
@@ -82,6 +107,7 @@ export const pageTitle = "Frisbee Site";
         background-color: transparent;
         border: 1.5px solid rgb(199, 106, 0);
         border-radius: 3px;
+        display:block;
         
 
     }
@@ -99,6 +125,13 @@ export const pageTitle = "Frisbee Site";
       width:2rem;
       height:4rem;
     } 
-
+    .card-background{
+      display:flex;
+      justify-content: center;
+      width:100vw;
+      height:50vh;
+      padding: 2rem;
+      
+    }
 
 </style>
