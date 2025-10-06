@@ -9,16 +9,46 @@ export const pageTitle = "Frisbee Site";
 
 <Layout compact title={pageTitle}></Layout>
 <Image src={GunxLogo} alt="frisbee" width={300} height={300}/>
+
+<h1>
+  GUNX Ultimate 
+</h1> 
+<h1>
+  SUNY New Paltz Ultimate Frisbee
+</h1>    
+<header>
+      <nav>
+       
+        <div class="nav-items">
+          <a href="#whatfrisbee" class="nav-btn">What is Frisbee?</a>
+          <a href="#meetGUNX" class="nav-btn">Meet the GUNX</a>
+          <a href="#dates" class="nav-btn">Important Dates</a> <br>
+          <a href="#practice" class="nav-btn">Practice Times</a>
+          <a href="#contact" class="nav-btn">Contact</a>
+        </div>
+      </nav>
+    </header>  
+
+</div>
 <h2>
-GUNX Ultimate 
-SUNY New Paltz Ultimate Frisbee
-</h2>     
   <p>What is Frisbee?</p>
   
   <Button href=""/>
-  
+   <p>Meet the GUNX</p>
+    <p>Important Dates</p>
+    <p>Practice Times</p>
+    <p>Contact</p>
+</h2>
   </Frame>
 </Layout>
+
+<div class="box">
+<p>hi</p>
+</div>
+
+
+
+
 
 <style>
     .page-container{
@@ -33,13 +63,42 @@ SUNY New Paltz Ultimate Frisbee
         flex-direction:column;
         align-items:center;
       }
-    h2{
-      color: white;}
-    p{
-        color:white;
+    h1{
+      color: white;
+      padding:1rem;
+    }
+    
+    nav-items{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:center;
+      
+     
+    }
+    a.nav-btn{
+        color:rgb(199, 106, 0);
+        text-decoration:none;
+        padding: .2rem;
+        background-color: transparent;
+        border: 1.5px solid rgb(199, 106, 0);
+        border-radius: 3px;
+        
+
+    }
+    a.nav-btn:hover{
+        background-color: rgb(199, 106, 0);
+        color:white
     }
 
 
+    p{
+        color:white;
+    }
+    .box{
+      background-color: rgb(255, 255, 255);
+      width:2rem;
+      height:4rem;
+    } 
 
 
 </style>
