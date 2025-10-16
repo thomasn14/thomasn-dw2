@@ -2,16 +2,25 @@
 import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
 import Button from "/workspaces/thomasn-dw2/src/components/Button.astro";
 // import {Image} from "/workspaces/thomasn-dw2/src/assets/Frisbee Site/GUNX Logo.png";
-import {Image} from 'astro:assets';
+import {Image} from "astro:assets";
 import GunxLogo from "../../assets/Frisbee Site/GUNX Logo.png";
-import CardBackground from "../../assets/Frisbee Site/card-background.png";
-import mirsad from "../../assets/Frisbee Site/mirsad.png";
+// eboard cards
+import  GooseCard from "/workspaces/thomasn-dw2/src/assets/goose.webp";
+import  ColeCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
+import  MirsadCard from "/workspaces/thomasn-dw2/src/assets/mirsad.png";
+import  NickyCard from "//workspaces/thomasn-dw2/src/assets/nicky.webp";
+import  EthanCard from "/workspaces/thomasn-dw2/src/assets/ethan.webp";
+import  RoseCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
+import  MayCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
+import ShoshCard from "/workspaces/thomasn-dw2/src/assets/shosh.webp";
+import TeamPic from "../../assets/Frisbee Site/TeamPic.jpg";
+// eboard end
 export const pageTitle = "Frisbee Site";
 ---
 
 
 <Layout compact title={pageTitle}></Layout>
-<Image src={GunxLogo} alt="frisbee" width={300} height={300}/>
+<Image src={GunxLogo} alt="frisbee" class="GunxLogo"/>
 
 <h1>
   GUNX Ultimate 
@@ -34,29 +43,36 @@ export const pageTitle = "Frisbee Site";
 
 </div>
 <h2>
-  <p>What is Frisbee?</p>
+  <p class="bungee">What is Frisbee?</p>
 
   <!-- get involved button -->
-  <Button href=""/> 
+  <Button href="" class="getinvolved"/> 
 
     <section id="whatfrisbee">
-     <p>What is Frisbee?</p>
+     <p class="bungee">Who Are We?</p>
+     <div class"team-pic-wrap">
+        <Image src={TeamPic} alt="Team Photo" class="TeamPic"/>
+        <div class="hcap">AARRGGGHHH!</div>
+     </div>
+
+    <h2>Example</h2>
+    <span class="hovertext" data-hover="Hello, this is the tooltip">Try hover over me</span></div>
   </section>
 
   <section id="meetGUNX">
-     <p>Meet the GUNX</p>
+     <p class="bungee">Meet the GUNX</p>
   </section>
 
   <section id="dates">
-     <p>Important Dates</p>
+     <p class="bungee">Important Dates</p>
    </section>
 
   <section id="practice">
-     <p>Practice Times</p>
+     <p class="bungee">Practice Times</p>
    </section>
 
   <section id="contact">
-     <p>Contact</p>
+     <p class="bungee">Contact</p>
    </section>
  
    
@@ -65,17 +81,17 @@ export const pageTitle = "Frisbee Site";
   </Frame>
 </Layout>
 
-
-<div class="img-container">
-
-<Image src={CardBackground} alt="" class="img-background"/>
-<!-- mirsad card -->
-<Image src={mirsad} alt="" class="mirsad"/>
-<p class="title">Coach</p>
-
-<!-- mirsad card -->
-
-</div>
+<!-- eboard cards -->
+<Image src={GooseCard} alt="" class="eboardCard"/>
+<Image src={ColeCard} alt="" class="eboardCard"/>
+<Image src={MirsadCard} alt="" class="eboardCard"/>
+<Image src={EthanCard} alt="" class="eboardCard"/>
+<Image src={NickyCard} alt="" class="eboardCard"/>
+<Image src={MayCard} alt="" class="eboardCard"/>
+<Image src={MayCard} alt="" class="eboardCard"/>
+<Image src={RoseCard} alt="" class="eboardCard"/>
+<Image src={ShoshCard} alt="" class="eboardCard"/>
+<!-- card end-->
 
 
 
@@ -99,8 +115,14 @@ export const pageTitle = "Frisbee Site";
     h1{
       color: white;
       padding:1rem;
-    }
+      
+      display:flex;
+      justify-content: center;
+      font-family: 'Jomolhari', serif;
     
+    }
+
+/* nav buttons */
     .nav-items{
       display:flex;
       flex-wrap: wrap;
@@ -109,6 +131,7 @@ export const pageTitle = "Frisbee Site";
       
      
     }
+    
     a.nav-btn{
         color:rgb(199, 106, 0);
         text-decoration:none;
@@ -117,47 +140,77 @@ export const pageTitle = "Frisbee Site";
         border: 1.5px solid rgb(199, 106, 0);
         border-radius: 3px;
         display:block;
-        
-
     }
+    
     a.nav-btn:hover{
         background-color: rgb(199, 106, 0);
         color:white
     }
+ /* nav buttons */
 
 
     p{
-        color:white;
+      color:white;
     }
+  /* hover text */
+  .hovertext {
+      position: relative;
+      border-bottom: 1px dotted black;
+      }
+      .hovertext:before {
+      content: attr(data-hover);
+      visibility: hidden;
+      opacity: 0;
+      width: 140px;
+      background-color: black;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      padding: 5px 0;
+      transition: opacity 1s ease-in-out;
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 110%;
+      }
+      .hovertext:hover:before {
+      opacity: 1;
+      visibility: visible;
+      }
+/* hover text */
 
-    .img-container{
+/* all h2 text */
+    .bungee{
+      font-family: 'Bungee', system-ui;
+      font-weight: lighter;
       display:flex;
       justify-content: center;
-      width:85%;
-      height:auto;
-      max-width:500px;
-      max-height:700px;
-      object-fit:contain;
-      padding:1rem;
-      position:relative;
+    }
+/* all h2 text */
+
+
+
+  /* team picture */
+    .TeamPic{
+      border-radius: 10px;
+      display:flex;
+      justify-content: center;
+      padding:.4rem;
+    }
+/* (B) POSITION CAPTION */
+    .hwrap { position: relative; }
+/* PLACE AT BOTTOM */
+    .hcap {
+      position: absolute; bottom: 0; left: 0;
+    }
+/* (C) ONLY SHOW CAPTION ON HOVER */
+      .hcap {
+        visibility: none; opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .hwrap:hover .hcap{
+        visibility: visible; opacity: 1;
+      }
+          
       
-    }
-    .img-background{
-      position:absolute;
-      width:100%;
-      height:auto;
-      max-width:550px;
-      max-height:770px;
-      object-fit:contain;
-      z-index: -1;
-    }
-    .mirsad{
-      position:relative;
-      left:6rem;
-      top:10rem;
-      width:110%;
-      height:auto;
-
-    }
-
 </style>
