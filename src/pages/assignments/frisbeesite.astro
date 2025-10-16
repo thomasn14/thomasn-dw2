@@ -24,8 +24,6 @@ export const pageTitle = "Frisbee Site";
 
 <h1>
   GUNX Ultimate 
-</h1> 
-<h1>
   SUNY New Paltz Ultimate Frisbee
 </h1>    
 <header>
@@ -50,7 +48,7 @@ export const pageTitle = "Frisbee Site";
 
     <section id="whatfrisbee">
      <p class="bungee">Who Are We?</p>
-     <div class"team-pic-wrap">
+     <div class="team-pic-wrap">
         <Image src={TeamPic} alt="Team Photo" class="TeamPic"/>
         <div class="hcap">AARRGGGHHH!</div>
      </div>
@@ -61,6 +59,17 @@ export const pageTitle = "Frisbee Site";
 
   <section id="meetGUNX">
      <p class="bungee">Meet the GUNX</p>
+     <!-- eboard cards -->
+<Image src={GooseCard} alt="Goose Mascot" class="eboardCard"/>
+<Image src={ColeCard} alt="Cole Enslen President" class="eboardCard"/>
+<Image src={MirsadCard} alt="Mirsad" class="eboardCard"/>
+<Image src={EthanCard} alt="Ethan Gravel Social Media Manager" class="eboardCard"/>
+<Image src={NickyCard} alt="Nicky Thomas Captain" class="eboardCard"/>
+<Image src={RoseCard} alt="Rose Bromage Spirit Captain" class="eboardCard"/>
+<Image src={MayCard} alt="May Hornbuckle Secretary" class="eboardCard"/>
+<Image src={ShoshCard} alt="Shoshana Shapiro Treasurer" class="eboardCard"/>
+
+<!-- card end-->
   </section>
 
   <section id="dates">
@@ -81,17 +90,7 @@ export const pageTitle = "Frisbee Site";
   </Frame>
 </Layout>
 
-<!-- eboard cards -->
-<Image src={GooseCard} alt="" class="eboardCard"/>
-<Image src={ColeCard} alt="" class="eboardCard"/>
-<Image src={MirsadCard} alt="" class="eboardCard"/>
-<Image src={EthanCard} alt="" class="eboardCard"/>
-<Image src={NickyCard} alt="" class="eboardCard"/>
-<Image src={MayCard} alt="" class="eboardCard"/>
-<Image src={MayCard} alt="" class="eboardCard"/>
-<Image src={RoseCard} alt="" class="eboardCard"/>
-<Image src={ShoshCard} alt="" class="eboardCard"/>
-<!-- card end-->
+
 
 
 
@@ -151,6 +150,13 @@ export const pageTitle = "Frisbee Site";
 
     p{
       color:white;
+    }
+
+    /* eboard card */
+    .eboardCard{
+      display:flex;
+      justify-content: center;
+     
     }
   /* hover text */
   .hovertext {
