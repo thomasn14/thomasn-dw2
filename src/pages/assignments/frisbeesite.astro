@@ -1,20 +1,21 @@
 ---
-import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
-import Button from "/workspaces/thomasn-dw2/src/components/Button.astro";
-// import {Image} from "/workspaces/thomasn-dw2/src/assets/Frisbee Site/GUNX Logo.png";
-import {Image} from "astro:assets";
-import GunxLogo from "../../assets/Frisbee Site/GUNX Logo.png";
+import Layout from "../../layouts/Layout.astro";
+import Button from "@components/Button.astro";
+// import {Image} from "@assets/Frisbee Site/GUNX Logo.png";
+import { Image } from "astro:assets";
+import GunxLogo from "@assets/Frisbee Site/GUNX Logo.png";
 // eboard cards
-import  GooseCard from "/workspaces/thomasn-dw2/src/assets/goose.webp";
-import  ColeCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
-import  MirsadCard from "/workspaces/thomasn-dw2/src/assets/mirsad.png";
-import  NickyCard from "//workspaces/thomasn-dw2/src/assets/nicky.webp";
-import  EthanCard from "/workspaces/thomasn-dw2/src/assets/ethan.webp";
-import  RoseCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
-import  MayCard from "/workspaces/thomasn-dw2/src/assets/cole.webp";
-import ShoshCard from "/workspaces/thomasn-dw2/src/assets/shosh.webp";
-import TeamPic from "../../assets/Frisbee Site/TeamPic.jpg";
+import GooseCard from "@assets/goose.webp";
+import ColeCard from "@assets/cole.webp";
+import MirsadCard from "@assets/mirsad.webp";
+import NickyCard from "@assets/nicky.webp";
+import EthanCard from "@assets/ethan.webp";
+import RoseCard from "@assets/rose.webp";
+import MayCard from "@assets/may.webp";
+import ShoshCard from "@assets/shosh.webp";
+import TeamPic from "@assets/Frisbee Site/TeamPic.jpg";
 // eboard end
+
 export const pageTitle = "Frisbee Site";
 ---
 
@@ -22,15 +23,18 @@ export const pageTitle = "Frisbee Site";
 <Layout compact title={pageTitle}></Layout>
 <Image src={GunxLogo} alt="frisbee" class="GunxLogo"/>
 
+
 <h1>
-  GUNX Ultimate 
-  SUNY New Paltz Ultimate Frisbee
-</h1>    
+  GUNX Ultimate
+</h1>  
+<h3>  SUNY New Paltz Ultimate Frisbee</h3>
+
+  
 <header>
       <nav>
        
         <div class="nav-items">
-          <a href="#whatfrisbee" class="nav-btn">What is Frisbee?</a>
+          <a href="#whatfrisbee" id="1"class="nav-btn">What is Frisbee?</a>
           <a href="#meetGUNX" class="nav-btn">Meet the GUNX</a>
           <a href="#dates" class="nav-btn">Important Dates</a> 
           <a href="#practice" class="nav-btn">Practice Times</a>
@@ -50,11 +54,19 @@ export const pageTitle = "Frisbee Site";
      <p class="bungee">Who Are We?</p>
      <div class="team-pic-wrap">
         <Image src={TeamPic} alt="Team Photo" class="TeamPic"/>
-        <div class="hcap">AARRGGGHHH!</div>
+       <p class="whorwe">
+      New Paltz Gunx welcomes all students <br>
+      who would like to learn the game of Ultimate Frisbee.<br>
+      We take all players no matter what experience they have, <br>
+      and teach/train them to be better players. Ultimate Frisbee is a <br>
+      great way to stay in shape and make friends.<br>
+      We accept all genders so if you are looking for a fun, athletic <br>
+      extracurricular this is the one to join!
+       </p>
      </div>
 
     <h2>Example</h2>
-    <span class="hovertext" data-hover="Hello, this is the tooltip">Try hover over me</span></div>
+    <span class="hovertext" data-hover=""></span></div>
   </section>
 
   <section id="meetGUNX">
@@ -82,6 +94,17 @@ export const pageTitle = "Frisbee Site";
 
   <section id="contact">
      <p class="bungee">Contact</p>
+        
+    <div class="footer">
+       
+        <Image src={GunxLogo} alt="Gunx Logo" class="footerimg"/>
+      
+        <p>
+          President:Cole Enslen<br>
+          Email:ultimate.paltz@gmail.com<br>
+           <a href="https://www.instagram.com/npultimate/ class="insta">GUNX Instagram</a>
+        </p>
+    </div>    
    </section>
  
    
@@ -109,16 +132,23 @@ export const pageTitle = "Frisbee Site";
         display:flex;
         flex-direction:column;
         align-items:center;
-        justify-content: center;;
+        justify-content: center;
+        flex-wrap:wrap;
       }
     h1{
       color: white;
-      padding:1rem;
-      
+     
       display:flex;
       justify-content: center;
       font-family: 'Jomolhari', serif;
     
+    }
+        h3{
+      color: white;
+      display:flex;
+      justify-content: center;
+      font-family: 'Jomolhari', serif;
+      padding-bottom: 1rem;;
     }
 
 /* nav buttons */
@@ -146,16 +176,22 @@ export const pageTitle = "Frisbee Site";
         color:white
     }
  /* nav buttons */
-
-
+    .getinvolved{
+      display: flex;
+      justify-content: center;
+      
+    }
     p{
       color:white;
     }
 
     /* eboard card */
     .eboardCard{
+     
       display:flex;
       justify-content: center;
+      
+      padding:0%;
      
     }
   /* hover text */
@@ -192,6 +228,9 @@ export const pageTitle = "Frisbee Site";
       display:flex;
       justify-content: center;
     }
+    #1{
+      padding-bottom:1rem;
+    }
 /* all h2 text */
 
 
@@ -200,23 +239,36 @@ export const pageTitle = "Frisbee Site";
     .TeamPic{
       border-radius: 10px;
       display:flex;
+      
       justify-content: center;
       padding:.4rem;
+      
     }
-/* (B) POSITION CAPTION */
-    .hwrap { position: relative; }
-/* PLACE AT BOTTOM */
-    .hcap {
-      position: absolute; bottom: 0; left: 0;
+    .whorwe{
+      font-weight:lighter;
+      text-align:center;
+      font-size: medium;
     }
-/* (C) ONLY SHOW CAPTION ON HOVER */
-      .hcap {
-        visibility: none; opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .hwrap:hover .hcap{
-        visibility: visible; opacity: 1;
-      }
+
+    .contact{
+      background-color: rgb(81, 80, 80);
+      
+    }
+    .footerimg{
+      width:25%;
+      height:25%;
+    }
+    .footer p{
+     font-size: small;
+     font-weight:lighter;
+     padding-left: .5rem;
+    }
+    .footer{
+      display:flex;
+      justify-content: center;
+      flex-direction:row;
+    
+    }
           
       
 </style>
