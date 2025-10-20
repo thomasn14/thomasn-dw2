@@ -1,0 +1,93 @@
+---
+const {href}=Astro.props;
+---
+
+<section class="day-week">
+
+    <div class="date-num">
+        <h2>
+             Tuesday
+        </h2>
+      
+    </div>
+     <div class="date-text">
+         Time: 4:30-6:30PM  Location: <a href="https://maps.app.goo.gl/HNckr4kG5y67th6w8">West Field</a>
+    </div>
+</section>
+
+<section class="day-week">
+
+    <div class="date-num">
+        <h2>
+             Wednesday
+        </h2>
+      
+    </div>
+     <div class="date-text">
+         Time: 4:30-6:30PM  Location: <a href="https://maps.app.goo.gl/HNckr4kG5y67th6w8">West Field</a>
+    </div>
+</section>
+<section class="day-week">
+
+    <div class="date-num">
+        <h2>
+             Friday
+        </h2>
+      
+    </div>
+     <div class="date-text">
+         Time: 4:30-6:30PM  Location: <a href="https://maps.app.goo.gl/HNckr4kG5y67th6w8">West Field</a>
+    </div>
+</section>
+<section class="day-week">
+
+    <div class="date-num">
+        <h2>
+             Sunday
+        </h2>
+      
+    </div>
+     <div class="date-text">
+         Time: 11:00-1:00pm Location: <a href="https://maps.app.goo.gl/HNckr4kG5y67th6w8">West Field</a>
+    </div>
+</section>
+<style>
+    .day-week{
+        
+        text-decoration:none;
+        padding:.5rem;
+
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+       
+        
+    }
+
+    .date-text{
+                background-color: transparent;
+        border: 1.5px solid rgb(199, 106, 0);
+        border-radius: 3px;
+        color: rgb(199, 106, 0);
+        padding:2rem;
+        font-size: 1rem;
+    }
+    .date-num{
+        background-color: rgb(199, 106, 0);
+        color:white;
+        padding: 1rem;
+        border-radius: 5px;
+        display:flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    h2{
+        font-size:2rem;
+        margin:.5rem;
+    }
+    p {
+        
+    }
+
+</style>

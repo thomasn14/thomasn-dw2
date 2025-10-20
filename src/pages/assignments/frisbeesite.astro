@@ -17,6 +17,7 @@ import TeamPic from "@assets/Frisbee Site/TeamPic.jpg";
 // eboard end
 import Dates from "@components/Dates.astro";
 import DatesTwo from "@components/Datestwo.astro";
+import Practice from "@components/Practice.astro";
 export const pageTitle = "Frisbee Site";
 ---
 
@@ -88,6 +89,7 @@ export const pageTitle = "Frisbee Site";
 <!-- card end-->
   </section>
 
+  <!-- Dates -->
   <section id="dates">
     <hr style="border: .2px solid rgb(255, 255, 255); width: 50%;">
      <p class="bungee">Important Dates</p>
@@ -95,12 +97,17 @@ export const pageTitle = "Frisbee Site";
      <Dates> </Dates>
      <DatesTwo> </DatesTwo>
    </section>
-
+  <!-- Dates -->
+  <!-- Practice -->
   <section id="practice">
     <hr style="border: .2px solid rgb(255, 255, 255); width: 50%;">
      <p class="bungee">Practice Times</p>
     <hr style="border: .2px solid rgb(255, 255, 255); width: 50%;">
+
+    <Practice> </Practice>
    </section>
+  <!-- Practice -->
+
 
   <section id="contact">
     <hr style="border: .2px solid rgb(255, 255, 255); width: 50%;">
@@ -113,8 +120,9 @@ export const pageTitle = "Frisbee Site";
         <p>
           President:Cole Enslen<br>
           Email:ultimate.paltz@gmail.com<br>
-           <a href="https://www.instagram.com/npultimate/ class="insta">GUNX Instagram</a>
+          <a href="https://www.instagram.com/npultimate/" class="insta">GUNX Instagram</a>
         </p>
+
     </div>    
    </section>
  
@@ -281,3 +289,163 @@ export const pageTitle = "Frisbee Site";
       padding-bottom:1rem;
     }
 </style>
+
+
+
+@media (max-width: 768px) {
+
+<style>
+    .page-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+  }
+    body {
+        background-color: black;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content: center;
+        flex-wrap:wrap;
+      }
+    h1{
+      color: white;
+     
+      display:flex;
+      justify-content: center;
+      font-family: 'Jomolhari', serif;
+    
+    }
+
+
+        h3{
+      color: white;
+      display:flex;
+      justify-content: center;
+      font-family: 'Jomolhari', serif;
+      padding-bottom: 1rem;;
+    }
+
+/* nav buttons */
+    .nav-items{
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:center;
+      gap:1rem;
+      
+     
+    }
+    
+    a.nav-btn{
+        color:rgb(199, 106, 0);
+        text-decoration:none;
+        padding: .2rem;
+        background-color: transparent;
+        border: 1.5px solid rgb(199, 106, 0);
+        border-radius: 3px;
+        display:block;
+    }
+    
+    a.nav-btn:hover{
+        background-color: rgb(199, 106, 0);
+        color:white
+    }
+ /* nav buttons */
+    .getinvolved{
+      display: flex;
+      justify-content: center;
+      
+    }
+    p{
+      color:white;
+    }
+
+    /* eboard card */
+
+   .meet{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center;
+
+   }
+
+    img.eboardCard{
+     
+      display:flex;
+      justify-content: center;
+      padding:0%;
+      max-width:470px;
+      
+     
+    }
+ 
+
+/* all h3 text */
+    .bungee{
+      font-family: 'Bungee', system-ui;
+      font-weight: lighter;
+      display:flex;
+      justify-content: center;
+      text-align:center;
+      padding-bottom:1rem;
+      text-size:large;
+    }
+    #1{
+      padding-bottom:1rem;
+    }
+/* all h2 text */
+
+
+
+  /* team picture */
+    .TeamPic{
+      border-radius: 10px;
+      display:flex;
+      justify-content: center;
+      padding:.4rem;
+      
+    }
+    .whorwe{
+      font-weight:lighter;
+      text-align:center;
+      font-size: medium;
+    }
+
+    .contact{
+      background-color: rgb(81, 80, 80);
+      
+    }
+    .footerimg{
+      width:25%;
+      height:25%;
+    }
+    .footer p{
+     font-size: small;
+     font-weight:lighter;
+     padding-left: .5rem;
+    }
+    .footer{
+      display:flex;
+      justify-content: center;
+      flex-direction:row;
+    
+    }
+         hr{
+          display:flex;
+          flex-wrap: wrap;
+         } 
+    h2 a{
+      display:flex;
+      justify-content: center;
+      color: white;
+      font-size:large;
+      padding-bottom:1rem;
+    }
+
+
+}
+
+
+  
