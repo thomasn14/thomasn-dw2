@@ -8,27 +8,125 @@ import {Content as SampleContent} from "../components/markdown/sample-content.md
 
 ---
 
-<Layout title="Home">
-  <h1>Welcome!</h1>
-  <Button href="assignment,assignment 01, home"/>
-<Accordian title="Sample Accordian">
-<p>Content in accordian</p>
-<p> More content</p>
-</Accordian>
   
 <Layout title="Home">
-  <h1>Site Proposal</h1>
-  <ButtonProposal href="assignment,assignment 01, home"/>
 
-  <Frame>
-     <Frame title="My awesome frame"/>
-  <p>My Site Proposal</p>
-  <p>
-    Site for frisbee team, has a calander with important tournament dates, a roster, contact information for Captains and Coaches.
-    What we learned at practice last week/ what we are foucusing on this week. 
-  </p>
-  </Frame>
-  <SampleContent/>
-</Layout>
+<body>
+      <h1>Nicky's DW2 Site!!</h1>
+
+      <button id = "button-dark">Dark Theme</button>
+      <button id = "button-light">Light Theme</button>
 
 
+    </Layout>
+</body>
+
+<script>
+    // find button
+    const buttonDark = document.querySelector("#button-dark");
+    // set color mode
+    const setDark = function() {
+        document.documentElement.style.colorScheme = "dark";}
+    // connecting function to button
+    buttonDark?.addEventListener("click", setDark);
+
+    const buttonLight = document.querySelector("#button-light");
+    const setLight = function() {
+        document.documentElement.style.colorScheme = "light";}
+    buttonLight?.addEventListener("click", setLight);
+    
+   
+</script>
+
+
+<!-- global theme styling -->
+<style is:global>
+
+:root {
+    --theme-dark-fg:#DBEEDE;
+    --theme-dark-bg:#4B6650;
+    --theme-dark-accent:#A18716;
+
+    --theme-light-fg: #394B5B;
+    --theme-light-bg: #DEE4F1;
+    --theme-light-accent:#61C8FF;
+    color-scheme: light dark;
+    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+}
+<script>
+    /* // find button */
+    const buttonDark = document.querySelector("#button-dark");
+    /* // set color mode */
+    const setDark = function() {
+        document.documentElement.style.colorScheme = "dark";}
+    /* // connecting function to button */
+    buttonDark?.addEventListener("click", setDark);
+
+    const buttonLight = document.querySelector("#button-light");
+    const setLight = function() {
+        document.documentElement.style.colorScheme = "light";}
+    buttonLight?.addEventListener("click", setLight);
+    
+   
+</script>
+
+/* 
+<!-- global theme styling --> */
+<style is:global>
+
+:root {
+    --theme-dark-fg:#DBEEDE;
+    --theme-dark-bg:#4B6650;
+    --theme-dark-accent:#A18716;
+
+    --theme-light-fg: #394B5B;
+    --theme-light-bg: #DEE4F1;
+    --theme-light-accent:#61C8FF;
+    color-scheme: light dark;
+    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+}
+</style>
+
+<style>
+  body{
+    backgrouind-color:var(--color-bg);
+    }
+    h1{
+    color:var(--color-accent);
+    }
+     body{
+    background-color:var(--color-bg);
+
+    }
+
+    *{
+    color:var(--color-fg);}
+
+    p{   
+    color:var(--color-accent);
+
+    }
+    #button-dark, #button-light{
+        backround-color:var(--color-fg);}
+
+    #button-dark, #button-light{
+        margin:10px;
+        padding:10px;
+        border-radius:5px;
+        border:none;
+        cursor:pointer;
+        color:var(--color-fg);
+        backround-color:var(--color-fg);}
+
+    #button-dark:hover, #button-light:hover{
+        background-color:var(--color-accent);
+        color:var(--color-bg);
+    }
+  }
+
+
+</style>

@@ -1,0 +1,31 @@
+---
+import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
+export const pageTitle = "Javascript Arrays";
+
+const animals = [
+    { 
+        name:"dog",
+        type:"mammal",
+    } , 
+    { 
+        name:"cat",
+        type:'mammal',
+    } ,
+    {
+        name:"snake",
+        type:"reptile",
+    } ,
+    {
+        name: "crocodile",
+        type:"reptile",
+    } 
+  
+    ];
+---
+<Layout></Layout>
+
+{
+    animals.map(function (animal){
+       <p> return {animal.name}>{animal.type}</p>;
+    })
+}

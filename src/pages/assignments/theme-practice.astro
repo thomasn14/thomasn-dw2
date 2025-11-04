@@ -1,0 +1,108 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export const pageTitle = "Theme Practice";
+---
+
+<Layout title="Home">
+
+    <button id = "button-dark">Dark Theme</button>
+    <button id = "button-light">Light Theme</button>
+
+   <span id = "dot" class="dot1"></span>
+<span id = "dot" class="dot2"></span>
+<span id = "dot" class="dot3"></span>
+<span id = "dot" class="dot4"></span>
+
+<body>
+<div>
+  <p>This is your Design for the Web 2 starter site.</p>
+  <p>
+    Feel free to start editing this page in <code>src/pages/index.astro</code>
+  </p>
+</div>
+
+</Layout>
+</body>
+
+
+<script>
+    // find button
+    const buttonDark = document.querySelector("#button-dark");
+    // set color mode
+    const setDark = function() {
+        document.documentElement.style.colorScheme = "dark";}
+    // connecting function to button
+    buttonDark?.addEventListener("click", setDark);
+
+    const buttonLight = document.querySelector("#button-light");
+    const setLight = function() {
+        document.documentElement.style.colorScheme = "light";}
+    buttonLight?.addEventListener("click", setLight);
+    
+   
+</script>
+
+
+<!-- global theme styling -->
+<style is:global>
+
+:root {
+    --theme-dark-fg:#DBEEDE;
+    --theme-dark-bg:#4B6650;
+    --theme-dark-accent:#A18716;
+
+    --theme-light-fg: #394B5B;
+    --theme-light-bg: #DEE4F1;
+    --theme-light-accent:#61C8FF;
+    color-scheme: light dark;
+    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
+    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
+    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
+}
+
+
+</style>
+
+
+<style>
+
+ body{
+    background-color:var(--color-bg);
+
+    }
+
+    *{
+    color:var(--color-fg);}
+
+    p{   
+    color:var(--color-accent);
+
+    }
+    #button-dark, #button-light{
+        backround-color:var(--color-fg);}
+
+    #button-dark, #button-light{
+        margin:10px;
+        padding:10px;
+        border-radius:5px;
+        border:none;
+        cursor:pointer;
+        color:var(--color-fg);
+        backround-color:var(--color-fg);}
+
+    #button-dark:hover, #button-light:hover{
+        background-color:var(--color-accent);
+        color:var(--color-bg);
+    }
+    #dot {
+  height: 150px;
+  width: 150px;
+  background-color: var(--color-fg);
+  border-radius: 50%;
+  display: inline-block;
+}
+#dot:hover{
+    background-color:var(--color-accent);
+    boarder-radius: 0%;
+}
+</style>

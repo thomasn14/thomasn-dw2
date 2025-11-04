@@ -1,0 +1,76 @@
+---
+import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
+export const pageTitle = "JavaScript Example";
+---
+
+<Layout>
+
+
+<body>
+<!-- font size on click -->
+ <section class="font-click-section">
+      <button id="btn-font-toggle">Toggle Font Size</button>
+      <div class="text-area">Here's some text</div>
+</section>
+<!-- font size on click -->
+<section>
+
+      
+
+</section>
+
+</body>
+
+
+  
+<script>
+// change font size on click example
+   const btnToggle = document.querySelector('#btn-font-toggle');
+   const toggleFont = function(){
+      const textArea = document.querySelector('.text-area');
+      textArea.classList.toggle('font-large');
+  }
+  btnToggle.addEventListener('click', toggleFont);
+// font size on click
+
+// button color change on click
+
+</script>
+
+
+<style>
+
+
+
+</style>
+
+
+
+
+<style>
+/* font size on click */
+#btn-font-toggle{
+   background-color: black;
+   boarder:none;
+   padding:2rem;
+   color:antiquewhite;
+
+}
+   .font-click-section{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: blue;
+      color:antiquewhite;
+      
+   } 
+    .font-large{
+    font-size :10rem;
+    font-color:red;
+  }
+/* font size on click */
+
+</style>
+  
+</Layout>
+
