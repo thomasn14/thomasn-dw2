@@ -1,0 +1,10 @@
+---
+const { imageID } = Astro.props;
+
+const data = await fetch("https://api.thecatapi.com/v1/images/" + imageID);
+const imageData = await data.json();
+
+
+---
+<img src={imageData.url} alt="" />
+<p>{imageID}</p>

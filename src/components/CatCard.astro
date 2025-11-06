@@ -1,0 +1,30 @@
+---
+const { data } = Astro.props;
+import CatImage from './CatImage.astro';
+---
+<body>
+    <div class="cat-card">
+        <h2>{data.name}</h2>
+        <CatImage imageID={data.reference_image_id} />
+        <p class="temprement">{data.temprement}</p>
+        <p> {data.description}</p>
+        <a href={data.wikipedia_url}>View{data.name} on Wikipedia</a>
+    </div>
+</body>
+
+
+<style>
+    body{
+    background-color:var(--color-bg);
+    }
+
+    .cat-card{
+
+        border:1px solid black;
+        border-radius:10px;
+        padding:1.3rem;
+        margin:10px 0;
+     
+    }
+    
+</style>
