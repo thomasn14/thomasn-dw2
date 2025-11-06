@@ -1,15 +1,10 @@
 ---
-import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
-import Button from "@components/Button.astro";
-import Frame from "@components/Frame.astro";
-import ButtonProposal from "/workspaces/thomasn-dw2/src/components/site/ButtonProposal.astro";
-import Accordian from "/workspaces/thomasn-dw2/src/components/Accordian.astro";
-import {Content as SampleContent} from "../components/markdown/sample-content.md"
+import Layout from "../layouts/Layout.astro";
 
 ---
 
   
-<Layout title="Home">
+<Layout>
 
 <body>
       <h1>Nicky's DW2 Site!!</h1>
@@ -18,8 +13,9 @@ import {Content as SampleContent} from "../components/markdown/sample-content.md
       <button id = "button-light">Light Theme</button>
 
 
-    </Layout>
+   
 </body>
+ </Layout>
 
 <script>
     // find button
@@ -39,22 +35,6 @@ import {Content as SampleContent} from "../components/markdown/sample-content.md
 </script>
 
 
-<!-- global theme styling -->
-<style is:global>
-
-:root {
-    --theme-dark-fg:#DBEEDE;
-    --theme-dark-bg:#4B6650;
-    --theme-dark-accent:#A18716;
-
-    --theme-light-fg: #394B5B;
-    --theme-light-bg: #DEE4F1;
-    --theme-light-accent:#61C8FF;
-    color-scheme: light dark;
-    --color-fg: light-dark(var(--theme-light-fg), var(--theme-dark-fg));
-    --color-bg: light-dark(var(--theme-light-bg), var(--theme-dark-bg));
-    --color-accent: light-dark(var(--theme-light-accent), var(--theme-dark-accent));
-}
 <script>
     /* // find button */
     const buttonDark = document.querySelector("#button-dark");
@@ -74,6 +54,7 @@ import {Content as SampleContent} from "../components/markdown/sample-content.md
 
 /* 
 <!-- global theme styling --> */
+
 <style is:global>
 
 :root {

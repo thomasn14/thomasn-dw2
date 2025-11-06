@@ -1,5 +1,5 @@
 ---
-import Layout from "/workspaces/thomasn-dw2/src/layouts/Layout.astro";
+import Layout from "../layouts/Layout.astro";
 export const pageTitle = "Javascript Arrays";
 
 const animals = [
@@ -22,10 +22,11 @@ const animals = [
   
     ];
 ---
-<Layout></Layout>
+<Layout>
 
 {
     animals.map(function (animal){
        <p> return {animal.name}>{animal.type}</p>;
     })
 }
+</Layout>
