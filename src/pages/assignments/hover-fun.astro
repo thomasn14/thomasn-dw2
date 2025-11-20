@@ -1,0 +1,64 @@
+---
+import Layout from '../../layouts/Layout.astro';
+export const pageTitle = "Hover Fun";
+---
+
+<Layout> 
+<body>
+
+    <a class="link-style" href = "https://cats.com/">Cats</a>
+    <div class="btn2">🐕</div>
+
+</body>
+
+</Layout>
+
+
+
+<style>
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+.link-style {
+    display:inline-block;
+    background-color: blueviolet;
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: .5rem;
+    transition: all 1.5s ease-in-out;
+}
+.link-style:hover {
+    background-color:lightblue;
+    scale: 400%;
+    rotate: 1080deg;
+    transition: all 1.5s ease-in-out;
+
+}
+.btn2{
+    display:inline-block;
+    background-color: rgb(110, 155, 177);
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: .5rem;
+    
+    transition: scale 1.5s ease-in-out, rotate 1.0s;
+}
+.btn2:hover,
+.btn2:focus-visible{
+background-color: plum;
+scale:200%;
+rotate: 360deg;
+}
+
+
+
+</style>
